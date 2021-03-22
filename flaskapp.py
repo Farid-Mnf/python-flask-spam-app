@@ -10,7 +10,7 @@ def index():
     return render_template("index.html")
 
 @app.route('/spam/<string:email>')
-def hello(email):
+def spam_detect(email):
     result = main.spam_service(email)
     return jsonify(result)
 
